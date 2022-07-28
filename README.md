@@ -21,4 +21,4 @@
 {{ product.price | money }} OR LESS
 ```
 
-> Add 11.html 小米商城 sidebar menu。.
+> Add 11.html 小米商城 sidebar menu。.test
