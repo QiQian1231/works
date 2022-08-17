@@ -5,10 +5,87 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>单张卡片效果</title>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                height: 100%;
+                background-color: #ddd;
+            }
+            .container {
+                overflow: hidden;
+                margin: 100px;
+                width: 245px;
+                height: 352px;
+                background-color: #fff;
+            }
+
+            .card {
+                width: 170px;
+                height: 240px;
+                margin: 36px 36px 0 36px;
+                border: 1px solid #000;
+                box-sizing: border-box;
+                padding: 9px;
+            }
+
+            .card a {
+                display: block;
+                width: 100%;
+                height: 100%;
+                text-decoration: none;
+            }
+
+            .card-img {
+                width: 150px;
+                height: 150px;
+                overflow: hidden;
+            }
+
+            .card-img img {
+                vertical-align: top;
+                width: 100%;
+                height: 100%;
+                transition: transform ease 0.5s;
+            }
+
+            .card-title {
+                font-size: 12px;
+                color: #666;
+                line-height: 18px;
+                padding: 5px 0 10px;
+                transition: color ease 0.5s;
+            }
+
+            .card-price {
+                font-size: 12px;
+                color: #e1251b;
+            }
+
+            .card-price span {
+                font-size: 16px;
+                font-weight: 700;
+            }
+
+            .card a:hover .card-img img {
+                transform: scale(1.05);
+            }
+
+            .card a:hover .card-title {
+                color: #000;
+            }
+        </style>
     </head>
     <body>
         <div class="container">
-            <div class="card"></div>
+            <div class="card">
+                <a href="#">
+                    <div class="card-img"><img src="./images/13-2-card.png" alt="" width="150" height="150" /></div>
+                    <div class="card-title">iSeeJplus山茶花智能眼部按 摩器护眼仪</div>
+                    <div class="card-price">¥<span>679.</span>00</div>
+                </a>
+            </div>
         </div>
     </body>
 </html>
