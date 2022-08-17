@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Fixed Sidebar</title>
+        <script src="https://kit.fontawesome.com/62240f61a6.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="10.css" />
+    </head>
+    <style>
+        body {
+            height: 2000px;
+        }
+        .sidebar {
+            width: 5px;
+            height: 100vh;
+            background-color: #666;
+            position: fixed;
+        }
+        .iconbar {
+            width: 50px;
+            height: 210px;
+            background-color: #666;
+            position: absolute;
+            left: 5px;
+            top: calc(100vh / 2 - 105px);
+        }
+
+        .iconbar .item {
+            width: 50px;
+            height: 50px;
+            margin: 2px 0;
+            /* margin-right: 2px; */
+            text-align: center;
+            vertical-align: middle;
+            line-height: 50px;
+        }
+
+        .item i {
+            position: absolute;
+            display: block;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+        }
+        .iconbar .item a {
+            position: absolute;
+            background-color: rgba(179, 142, 142, 1);
+            display: block;
+            width: 0;
+            height: 50px;
+            left: 52px;
+            text-align: left;
+            line-height: 50px;
+            text-indent: 1em;
+            transition: width 1s;
+            overflow: hidden;
+            text-decoration: none;
+            color: antiquewhite;
+            font-weight: 700;
+        }
+
+        .iconbar .item:hover {
+            background-color: rgba(179, 142, 142, 1);
+        }
+        .iconbar .item:hover a {
+            width: 150px;
+        }
+    </style>
+    <body>
+        <div class="sidebar">
+            <div class="iconbar">
+                <div class="item"><i class="fa-solid fa-user fa-2x"></i><a href="#">Text Here</a></div>
+                <div class="item"><i class="fa-solid fa-location-dot fa-2x"></i><a href="#">Text Here</a></div>
+                <div class="item"><i class="fa-solid fa-phone fa-2x"></i><a href="#">Text Here</a></div>
+                <div class="item"><i class="fa-solid fa-bars fa-2x"></i><a href="#">Text Here</a></div>
+            </div>
+        </div>
+    </body>
+</html>

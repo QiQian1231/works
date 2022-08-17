@@ -1,0 +1,96 @@
+body {
+    margin: 0;
+    background: linear-gradient(to right, rgba(225, 167, 167, 0.5), rgba(164, 193, 221, 0.7));
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.timeline {
+    width: 804px;
+    height: 700px;
+    /* border: 2px solid red; */
+    margin: 50px auto 0;
+}
+
+.timeline .left {
+    width: 400px;
+    /* height: 300px; */
+    /* background-color: rgba(231, 191, 191, 1); */
+    float: left;
+    border-right: 4px solid rgba(69, 29, 229, 0.3);
+    position: relative;
+}
+
+.timeline .right {
+    width: 400px;
+    /* height: 300px; */
+    /* background-color: rgba(187, 214, 179, 1); */
+    float: right;
+    border-left: 4px solid rgba(69, 29, 229, 0.3);
+    position: relative;
+}
+
+.timeline .point {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 1);
+    display: block;
+    border: 2px solid rgba(69, 29, 229, 0.3);
+    border-radius: 7px;
+    position: absolute;
+    top: 50%;
+    margin-top: -7px;
+}
+
+.timeline .left .point {
+    right: -9px;
+}
+
+.timeline .right .point {
+    left: -9px;
+}
+
+.timeline .arrow {
+    width: 16px;
+    height: 16px;
+    background-color: #fff;
+    display: block;
+    position: absolute;
+    top: 50%;
+    margin-top: -8px;
+}
+
+.timeline .left .arrow {
+    right: 8px;
+    transform: rotate(45deg);
+}
+
+.timeline .right .arrow {
+    left: 8px;
+    transform: rotate(45deg);
+}
+
+.timeline .card {
+    /* height: 250px; */
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.timeline .left .card {
+    margin-right: 16px;
+}
+
+.timeline .right .card {
+    margin-left: 16px;
+}
+
+.timeline .card img {
+    width: 100%;
+    /* height: 200px; */
+    /* object-fit: cover; */
+}

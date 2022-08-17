@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,700;1,300;1,700&display=swap");
+
+* {
+    font-family: "Ubuntu";
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(rgb(135, 135, 230), rgb(183, 126, 126));
+}
+
+form {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 15px 10px;
+    display: flex;
+    border-radius: 12px;
+}
+
+label,
+input {
+    padding: 10px;
+}
+
+label {
+    background-color: aquamarine;
+    position: relative;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+
+label::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -12px;
+    height: 39.5px;
+    width: 12px;
+    background-color: aquamarine;
+}
+
+input {
+    border-radius: 12px;
+    z-index: 1;
+    border: 1px solid #fff;
+    padding-left: 20px;
+}
+
+input:active,
+input:focus {
+    outline: none;
+}
+.div {
+    width: 10px;
+    height: auto;
+}

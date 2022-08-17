@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网页布局</title>
+    <link rel="stylesheet" href="5.css">
+    <script src="https://kit.fontawesome.com/62240f61a6.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- header -->
+        <div class="header">
+            <div class="logo">Logo</div>
+            <div class="menu">
+                <div class="menu-item">Home</div>
+                <div class="menu-item">Content</div>
+                <div class="menu-item">Contact</div>
+            </div>
+            <div class="user"><i class="fa-solid fa-user"></i></div>
+        </div>
+
+        <!-- hero -->
+        <div class="hero">
+            <!-- hero hero-sidebar -->
+            <div class="hero-sidebar">
+                <div class="category">
+                    <a href="">Watches</a>
+                    <a href="">Sunglasses</a>
+                    <a href="">Jewelry</a>
+                    <a href="">Bags</a>
+
+                </div>
+                <div class="brand">
+                    <a href="">Crayo</a>
+                    <a href="">Shell</a>
+                    <a href="">Mobile</a>
+                    <a href="">SunCo</a>
+
+                </div>
+            </div>
+
+            <!-- hero image  -->
+            <div class="hero-img">
+                <h1>Image</h1>
+                <i class="fa-solid fa-user fa-2x"></i>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div id="app">
+        <ul v-for="brand in brand_list">
+            <h1>a</h1>
+            <div>{{ brand.brand_name }}</div>
+            <div>{{ brand.brand_desc }}</div>
+        </ul>
+    </div>
+    <script src="5.js"></script>
+</body>
+
+
+</html>

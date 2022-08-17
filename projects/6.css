@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 450px;
+  height: 350px;
+  background-color: lightcoral;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 20px 20px 50px 10px saddlebrown;
+  border-radius: 10px;
+}
+
+.container .winner {
+  height: 80px;
+  width: 100%;
+  background-color: bisque;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.container .main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.score {
+  width: 50px;
+  padding: 10px;
+  border: 3px dashed slateblue;
+  margin: 30px;
+  background-color: aquamarine;
+  box-shadow: 5px 5px darkslateblue;
+  border-radius: 10px;
+  font-size: 50px;
+}
+
+.main .home,
+.main .guest {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-transform: capitalize;
+}
+
+.btn {
+  border: 2px solid red;
+  padding: 5px 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.btn:hover {
+  border: 2px solid darkviolet;
+  transition: 0.3s;
+}

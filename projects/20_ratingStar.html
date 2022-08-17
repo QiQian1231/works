@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Flex Box</title>
+        <style>
+            .flex-table {
+                display: flex;
+            }
+            .flex-container {
+                width: 150px;
+                height: 200px;
+                background-color: rgb(246, 242, 142);
+                display: flex;
+                margin: 20px;
+                box-shadow: 20px 20px 20px 0 greenyellow;
+                border-radius: 20px;
+                flex-wrap: wrap;
+                align-content: space-around;
+            }
+            .flex-item {
+                width: 75px;
+                height: 100px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .child-item {
+                width: 15px;
+                height: 70px;
+                border-radius: 5px;
+                background-color: rgb(85, 218, 83);
+            }
+
+            .flex-container:nth-child(2) .flex-item {
+                width: 50px;
+                height: 200px;
+            }
+            .flex-container:nth-child(2) .flex-item:nth-child(2n + 1) {
+                flex-direction: column;
+                justify-content: space-around;
+                align-content: space-around;
+            }
+
+            .flex-container:nth-child(2) .flex-item .child-item:nth-child(2) {
+                align-self: center;
+            }
+
+            .flex-container:nth-child(3) {
+                /* flex-direction: column; */
+            }
+            .flex-container:nth-child(3) .flex-item {
+                width: 150px;
+                justify-content: space-around;
+            }
+
+            .rate {
+                display: flex;
+                font-size: 50px;
+                flex-direction: row-reverse;
+            }
+            .star::before {
+                content: "\2605";
+                color: #ddd;
+            }
+            .star.current,
+            .star.current::before,
+            .star.current ~ .star::before,
+            .star.current ~ .star {
+                color: rgb(222, 175, 21);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="flex-table">
+            <div class="flex-container">
+                <div class="flex-item item1">
+                    <div class="child-item"></div>
+                </div>
+                <div class="flex-item item2">
+                    <div class="child-item"></div>
+                </div>
+                <div class="flex-item item3">
+                    <div class="child-item"></div>
+                </div>
+                <div class="flex-item item4">
+                    <div class="child-item"></div>
+                </div>
+            </div>
+
+            <div class="flex-container">
+                <div class="flex-item">
+                    <div class="child-item"></div>
+                    <div class="child-item"></div>
+                </div>
+                <div class="flex-item">
+                    <div class="child-item"></div>
+                </div>
+                <div class="flex-item">
+                    <div class="child-item"></div>
+                    <div class="child-item"></div>
+                </div>
+            </div>
+
+            <div class="flex-container">
+                <div class="flex-item">
+                    <div class="child-item"></div>
+                    <div class="child-item"></div>
+                    <div class="child-item"></div>
+                </div>
+                <div class="flex-item">
+                    <div class="child-item"></div>
+                    <div class="child-item"></div>
+                    <div class="child-item"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="rate">
+            <div class="star">1</div>
+            <div class="star">2</div>
+            <div class="star">3</div>
+            <div class="star">4</div>
+            <div class="star">5</div>
+        </div>
+        <script>
+            var rate = document.querySelectorAll(".rate .star");
+            console.log(rate);
+            var len = rate.length;
+            console.log(len);
+            for (var i = 0; i < len; i++) {
+                rate[i].onclick = function () {
+                    for (var j = 0; j < len; j++) {
+                        rate[j].classList.remove("current");
+                    }
+                    this.classList.add("current");
+                };
+            }
+
+            (function () {
+                var tabList = document.querySelectorAll(".m-tab a");
+                var item = document.querySelectorAll(".music-item .music-list");
+
+                for (var i = 0; i < item.length; i++) {
+                    tabList[i].index = i;
+                    tabList[i].onmouseover = function () {
+                        for (var j = 0; j < item.length; j++) {
+                            tabList[j].className = "";
+                            item[j].style.display = "none";
+                        }
+                        this.className = "active";
+                        item[this.index].style.display = "block";
+                    };
+                }
+            })();
+
+            function hello() {
+                for (var a = 0; a < 2; a++) {
+                    console.log("a: " + a);
+                    for (var b = 0; b < 3; b++) {
+                        console.log("b: " + b);
+                    }
+                }
+            }
+            hello();
+        </script>
+    </body>
+</html>

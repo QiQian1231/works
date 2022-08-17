@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Optional Tabs</title>
+        <style>
+            .tabs {
+                width: 800px;
+                height: 50px;
+                background-color: red;
+                margin: 50px auto;
+                border-radius: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .tab {
+                height: 40px;
+                line-height: 40px;
+                margin: 0 20px;
+                padding: 0 20px;
+                background-color: yellow;
+                border-radius: 40px;
+            }
+            .tab:hover {
+                background-color: pink;
+            }
+            .nav {
+                background-color: rgb(94, 207, 222);
+                height: 50px;
+                border-radius: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            #opt_1:checked ~ .opt_1,
+            #opt_2:checked ~ .opt_2,
+            #opt_3:checked ~ .opt_3,
+            #opt_4:checked ~ .opt_4,
+            #opt_5:checked ~ .opt_5 {
+                background-color: red;
+                transition: all 1s;
+                animation: shake 1s;
+            }
+            label {
+                background-color: rgb(237, 184, 184);
+                padding: 10px 20px;
+                margin: 0 10px;
+                border-radius: 99px;
+                transform: all;
+            }
+
+            @keyframes shake {
+                0% {
+                    transform: scale(0.9);
+                }
+                100% {
+                    transform: scale(1);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="tabs">
+            <div class="tab">备孕期间</div>
+            <div class="tab">怀孕</div>
+            <div class="tab">0-1岁</div>
+            <div class="tab">1-2岁</div>
+            <div class="tab">2-3岁</div>
+        </div>
+
+        <div class="nav">
+            <input type="radio" name="select" id="opt_1" checked hidden />
+            <input type="radio" name="select" id="opt_2" hidden />
+            <input type="radio" name="select" id="opt_3" hidden />
+            <input type="radio" name="select" id="opt_4" hidden />
+            <input type="radio" name="select" id="opt_5" hidden />
+            <label for="opt_1" class="opt_1">幼儿早教</label>
+            <label for="opt_2" class="opt_2">学前培训</label>
+            <label for="opt_3" class="opt_3">小学兴趣</label>
+            <label for="opt_4" class="opt_4">初中成长</label>
+            <label for="opt_5" class="opt_5">高中冲刺</label>
+        </div>
+    </body>
+</html>

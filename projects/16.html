@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+            }
+            .container {
+                padding: 10px;
+                margin: 100px;
+                width: 280px;
+                border: 8px solid #ddd;
+                border-radius: 5px;
+            }
+            .title::after {
+                display: block;
+                content: "";
+                clear: both;
+            }
+            h2 {
+                margin: 0;
+                float: left;
+            }
+            h2 span {
+                color: rgb(62, 70, 212);
+            }
+            .title a {
+                float: right;
+                color: #ddd;
+                text-decoration: none;
+            }
+            ul {
+                margin: 0;
+                list-style: none;
+                padding: 0;
+            }
+            .left {
+                width: 80px;
+                height: 80px;
+            }
+            .title + ul li a {
+                display: flex;
+                margin: 10px 0;
+                text-decoration: none;
+            }
+            .right {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding-left: 10px;
+                background-color: #ddd;
+                position: relative;
+            }
+            .right::after {
+                content: "";
+                width: 8px;
+                height: 8px;
+                border-top: 1px solid #000;
+                border-right: 1px solid #000;
+                transform: rotate(45deg);
+                position: absolute;
+                right: 10px;
+            }
+            .right-up {
+                font-weight: 700;
+            }
+            .left {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                color: #fff;
+                font-style: italic;
+            }
+            .left .left-up {
+                font-size: 0.7em;
+            }
+            .title + ul li:first-child a .left {
+                background-color: pink;
+            }
+            .title + ul li:nth-child(2) a .left {
+                background-color: rgb(89, 89, 210);
+            }
+            .title + ul li:last-child a .left {
+                background-color: orange;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="title">
+                <h2><span>Top</span> List</h2>
+                <a href="#">More</a>
+            </div>
+            <ul>
+                <li>
+                    <a href="#"
+                        ><div class="left">
+                            <div class="left-up">Offical</div>
+                            <div class="left-down">Top 500</div>
+                        </div>
+                        <div class="right">
+                            <div class="right-up">Top List</div>
+                            <ul>
+                                <li>123456</li>
+                                <li>123456</li>
+                            </ul>
+                        </div></a
+                    >
+                </li>
+                <li>
+                    <a href="#"
+                        ><div class="left">
+                            <div class="left-up">Offical</div>
+                            <div class="left-down">Top 500</div>
+                        </div>
+                        <div class="right">
+                            <div class="right-up">Top List</div>
+                            <ul>
+                                <li>123456</li>
+                                <li>123456</li>
+                            </ul>
+                        </div></a
+                    >
+                </li>
+                <li>
+                    <a href="#"
+                        ><div class="left">
+                            <div class="left-up">Offical</div>
+                            <div class="left-down">Top 500</div>
+                        </div>
+                        <div class="right">
+                            <div class="right-up">Top List</div>
+                            <ul>
+                                <li>123456</li>
+                                <li>123456</li>
+                            </ul>
+                        </div></a
+                    >
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>

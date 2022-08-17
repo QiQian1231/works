@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>3D Navbar</title>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+            }
+
+            ul {
+                margin: 0;
+                padding: 0;
+                margin-top: 50px;
+                list-style: none;
+                height: 80px;
+                background-color: skyblue;
+                padding-left: 100px;
+            }
+
+            ul li {
+                float: left;
+                perspective: 900px;
+            }
+
+            ul li a {
+                text-decoration: none;
+                color: aliceblue;
+                font-weight: 700;
+                cursor: pointer;
+                display: block;
+                height: 80px;
+                line-height: 80px;
+                padding: 0 20px;
+                margin: 0 10px;
+                background-color: pink;
+            }
+            .back {
+                background-color: khaki;
+                transform-origin: top;
+                transform: rotateX(-90deg);
+            }
+            ul li .rotate {
+                height: 80px;
+                transition: transform 2s;
+                transform-style: preserve-3d;
+                transform-origin: 50% 50% -40px;
+            }
+            ul li:hover .rotate {
+                transform: rotateX(90deg);
+            }
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li>
+                <div class="rotate"><a href="" class="front">Home</a><a href="" class="back">Home</a></div>
+            </li>
+            <li>
+                <div class="rotate"><a href="" class="front">Shop</a><a href="" class="back">Shop</a></div>
+            </li>
+            <li>
+                <div class="rotate"><a href="" class="front">About Us</a><a href="" class="back">About Us</a></div>
+            </li>
+            <li>
+                <div class="rotate"><a href="" class="front">Contact Us</a><a href="" class="back">Contact Us</a></div>
+            </li>
+        </ul>
+    </body>
+</html>
