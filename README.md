@@ -31,7 +31,7 @@
 
 > Add `17.html` Arry Mall PC version
 
-> `padding-bottom`可继承父元素宽作为自身高，可实现正方形效果
+### `padding-bottom`可继承父元素宽作为自身高，可实现正方形效果
 
 ```
 <!-- img in .item, set position:absolute; object-fit:cover -->
