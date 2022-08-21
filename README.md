@@ -33,7 +33,7 @@
 
 > `padding-bottom`可继承父元素宽作为自身高，可实现正方形效果
 
-`
+```
 
 <style>
     .box {
@@ -53,4 +53,4 @@
         <div class="item"></div>
     </div>
 </body>
-`
+```
