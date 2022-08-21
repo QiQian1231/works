@@ -30,3 +30,27 @@
 > Add `14.html` 3D Navbar
 
 > Add `17.html` Arry Mall PC version
+
+> `padding-bottom`可继承父元素宽作为自身高，可实现正方形效果
+
+`
+
+<style>
+    .box {
+        width: 200px;
+        height: 100px;
+        background-color: green;
+    }
+    .item {
+        width: 50%;
+        /* padding-bottom: 100%; 继承100% width 作为自身的height  */
+        padding-bottom: 100%;
+        background-color: khaki;
+    }
+</style>
+<body>
+    <div class="box">
+        <div class="item"></div>
+    </div>
+</body>
+`

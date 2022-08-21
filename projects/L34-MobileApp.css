@@ -1,0 +1,508 @@
+/* Reset CSS start */
+* {
+    /* 怪异盒子模型 */
+    box-sizing: border-box;
+}
+
+body {
+    font: 12px/1.5 Microsoft YaHei;
+    color: #101010;
+    background-color: rgb(245, 245, 245);
+}
+
+html,
+body {
+    margin: 0;
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+input {
+    outline: none;
+    border: none;
+}
+
+.clearfix::before {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* reset CSS end */
+
+/* head start */
+
+.head {
+    width: 100%;
+    height: 44px;
+    background-color: #0eb6ff;
+    padding: 7px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.head .position,
+.head .weixin {
+    display: block;
+    width: 43px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.head .position {
+    float: left;
+}
+
+.head .search {
+    margin: 0 43px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.head .search input {
+    width: 100%;
+    height: 30px;
+    border-radius: 15px;
+    padding-left: 35px;
+}
+
+.head .search input::placeholder {
+    opacity: 0.7;
+}
+
+.head .search img {
+    position: absolute;
+    left: 15px;
+    width: 16px;
+}
+.head .weixin {
+    float: right;
+}
+
+.head img {
+    width: 16px;
+    height: auto;
+}
+
+.head .weixin img {
+    width: 21px;
+}
+
+/* head end */
+
+/* menu start */
+
+.menu {
+    padding: 44px 10px 18px;
+    overflow: hidden;
+}
+
+.menu ul li {
+    width: 20%;
+    padding: 0 9px;
+    float: left;
+    text-align: center;
+    margin-top: 16px;
+}
+
+.menu .menu-item-icon {
+    background-color: rgb(190, 229, 112);
+    padding-bottom: 100%;
+    position: relative;
+    border-radius: 50%;
+}
+
+.menu li:nth-child(2) .menu-item-icon {
+    background-color: rgb(248, 206, 180);
+}
+
+.menu li:nth-child(3) .menu-item-icon {
+    background-color: rgb(180, 221, 255);
+}
+
+.menu li:nth-child(4) .menu-item-icon {
+    background-color: rgb(157, 186, 225);
+}
+
+.menu li:nth-child(5) .menu-item-icon {
+    background-color: rgb(255, 227, 143);
+}
+
+.menu li:nth-child(6) .menu-item-icon {
+    background-color: rgb(122, 217, 232);
+}
+
+.menu li:nth-child(7) .menu-item-icon {
+    background-color: rgb(194, 193, 253);
+}
+
+.menu li:nth-child(8) .menu-item-icon {
+    background-color: rgb(254, 205, 154);
+}
+
+.menu li:nth-child(9) .menu-item-icon {
+    background-color: rgb(152, 232, 193);
+}
+
+.menu li:nth-child(10) .menu-item-icon {
+    background-color: rgb(132, 209, 232);
+}
+
+.menu .menu-item-icon img {
+    position: absolute;
+    width: 35px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.menu .menu-item-title {
+    color: #101010;
+    padding-top: 10px;
+    line-height: 1;
+}
+
+/* menu end */
+
+/* main start */
+
+.main {
+    padding: 0 10px;
+}
+
+/* cheap start */
+.cheap {
+    padding: 16px 10px 10px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.cheap-head {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.cheap-head .cheap-head-left {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.cheap-head .cheap-head-right a {
+    display: flex;
+    align-items: center;
+}
+
+.cheap-head .cheap-head-right a img {
+    margin-left: 5px;
+}
+
+.cheap-items {
+    display: flex;
+}
+
+.cheap-items .cheap-item {
+    width: calc((100% - 50px) / 3);
+}
+
+.cheap-items .cheap-item:nth-child(2) {
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.cheap-items .cheap-item .cheap-item-img {
+    position: relative;
+    width: 100%;
+    padding-bottom: 85.5%;
+}
+
+.cheap-items .cheap-item .cheap-item-img img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.cheap-item-title {
+    color: #101010;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 7px 0;
+}
+
+.cheap-item-price {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cheap-item-price p {
+    margin: 0;
+    color: rgb(206, 95, 65);
+}
+
+.cheap-item-price p span {
+    margin: 0;
+    color: #101010;
+}
+/* cheap end */
+
+/* recommend start */
+
+.recommend {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+
+.recommend-left,
+.recommend-right {
+    width: 50%;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 15px 15px 10px 15px;
+}
+
+.recommend-left {
+    margin-right: 5px;
+}
+
+.recommend-right {
+    margin-left: 5px;
+}
+
+.recommend-left-title,
+.recommend-right-title {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.recommend-left-desc,
+.recommend-right-desc {
+    color: #9d9e9d;
+}
+
+.recommend-left-imgs,
+.recommend-right-imgs {
+    display: flex;
+    justify-content: space-between;
+}
+
+.recommend-left-img,
+.recommend-right-img {
+    width: 45%;
+    position: relative;
+}
+
+.recommend-left-img a,
+.recommend-right-img a {
+    display: block;
+    width: 100%;
+    padding-bottom: 100%;
+}
+
+.recommend-left-img img,
+.recommend-right-img img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+/* recommend end */
+
+/* category start */
+.category-lists {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 10px 5px;
+}
+
+.category-list-title {
+    color: #101010;
+}
+
+.category-list-desc {
+    color: #9d9e9d;
+    padding: 0 5px;
+}
+
+.category-list.active .category-list-title {
+    color: #0eb6ff;
+}
+
+.category-list.active .category-list-desc {
+    background-color: #0eb6ff;
+    color: #fff;
+    border-radius: 9px;
+}
+
+.category-items {
+    display: none;
+}
+
+.category-items:nth-child(1) {
+    display: block;
+}
+
+.category-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px 15px 8px;
+    background-color: #fff;
+    margin-bottom: 11px;
+    border-radius: 10px;
+}
+
+.category-item-right {
+    width: 22px;
+    height: 98px;
+    align-self: flex-end;
+    position: relative;
+}
+
+.category-item-right a {
+    display: block;
+    width: 22px;
+    height: 22px;
+    right: 0;
+    bottom: 22px;
+    position: absolute;
+}
+
+.category-item-right a img {
+    width: 100%;
+    height: 100%;
+}
+
+.category-item-left {
+    display: flex;
+}
+
+.category-item-left-img {
+    width: 94px;
+    height: 80px;
+}
+
+.category-item-left-img a {
+    display: block;
+    width: 94px;
+    height: 80px;
+}
+
+.category-item-left-img a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.category-item-left-info div:nth-child(1) {
+    color: #101010;
+    padding-bottom: 26px;
+}
+
+.category-item-left-info div:nth-child(2) span:nth-child(1) {
+    color: #ce5f41;
+    border: 1px solid #ce5f41;
+    padding: 0 3px;
+    border-radius: 5px;
+    margin-right: 6px;
+}
+
+.category-item-left-info div:nth-child(2) span:nth-child(2) {
+    color: #9d9e9d;
+    border: 1px solid #9d9e9d;
+    padding: 0 3px;
+    border-radius: 5px;
+}
+
+.category-item-left-info div:nth-child(3) {
+    color: #101010;
+    margin: 6px 0;
+}
+
+.category-item-left-info div:nth-child(3) span {
+    color: #ce5f41;
+}
+
+.category-item-left-info div:nth-child(4) {
+    color: #9d9e9d;
+}
+/* category end */
+
+/* main end */
+
+/* footer start */
+
+.tabbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    height: 50px;
+    width: 100%;
+    background-color: #fff;
+}
+
+.tabbar ul {
+    width: 100%;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.tabbar ul li {
+    width: 20%;
+}
+
+.tabbar ul li a {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #9d9e9d;
+}
+
+.tabbar ul li .tab-item-img {
+    width: 20px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.tabbar ul li .tab-item-img img {
+    width: 100%;
+    height: auto;
+}
+
+.tabbar ul li.active a {
+    color: #0eb6ff;
+}
+/* footer end */
