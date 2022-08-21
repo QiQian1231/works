@@ -34,7 +34,7 @@
 > `padding-bottom`可继承父元素宽作为自身高，可实现正方形效果
 
 ```
-<!-- img in .box, set position:absolute; object-fit:cover -->
+<!-- img in .item, set position:absolute; object-fit:cover -->
 
 <style>
     .box {
