@@ -59,8 +59,11 @@
 ## nginx 搭建服务器，解析域名
 
 > `cd /` back to root
+
 > `ps -ef | grep nginx` check process
+
 > `ps -C nginx -o pid` check pid
+
 > `rm -rf fileName` remove a file
 
 ## Connect Acumatica to FTP site
