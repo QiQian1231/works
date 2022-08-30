@@ -337,6 +337,9 @@ input {
 /* recommend end */
 
 /* category start */
+.category {
+    padding-bottom: 50px;
+}
 .category-lists {
     display: flex;
     justify-content: space-between;

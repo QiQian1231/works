@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Grid Responsive Page</title>
+        <script src="./echarts.js"></script>
+        <link rel="stylesheet" href="grid.css" />
+        <link rel="stylesheet" href="38-gridResponsivePage.css" />
+    </head>
+    <body>
+        <!-- header start -->
+        <div class="header">
+            <div class="header-nav">
+                <a href=""><img src="./images/L38/logo.png" alt="" /></a>
+                <span><img id="nav-icon" src="./images/L38/navicon.png" alt="" /></span>
+                <ul id="nav-ul" class="d-flex sm-hide">
+                    <li class="active"><a href="">概况</a></li>
+                    <li><a href="">教务</a></li>
+                    <li><a href="">营销</a></li>
+                    <li><a href="">运销</a></li>
+                    <li><a href="">用户</a></li>
+                    <li><a href="">交易</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- header end -->
+        <!-- menu start -->
+        <div class="menu" id="J_menu">
+            <ul class="main-menu lg-hide">
+                <li>
+                    <div class="main-menu-list">
+                        <img src="./images/L38/menu8.png" alt="" /><span class="title">教学管理</span>
+                        <span class="arrow"></span>
+                    </div>
+
+                    <ul class="sub-menu">
+                        <li class="sub-menu-list"><span class="circle"></span> 班级管理</li>
+                        <li class="sub-menu-list"><span class="circle"></span> 直播管理</li>
+                        <li class="sub-menu-list"><span class="circle"></span> 课程管理</li>
+                        <li class="sub-menu-list"><span class="circle"></span> 题库管理</li>
+                        <li class="sub-menu-list"><span class="circle"></span> 分类标签</li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="main-menu-list">
+                        <img src="./images/L38/menu2.png" alt="" /><span class="title">助学管理</span>
+                        <span class="arrow"></span>
+                    </div>
+                    <ul class="sub-menu">
+                        <li class="sub-menu-list"><span class="circle"></span> 班级管理</li>
+                        <li class="sub-menu-list"><span class="circle"></span> 分类标签</li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="main-menu-list">
+                        <img src="./images/L38/menu3.png" alt="" /><span class="title">营销管理</span>
+                        <span class="arrow"></span>
+                    </div>
+                    <ul class="sub-menu">
+                        <li class="sub-menu-list"><span class="circle"></span> 班级管理</li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="main-menu-list">
+                        <img src="./images/L38/menu4.png" alt="" /><span class="title">用户管理</span>
+                        <span class="arrow"></span>
+                    </div>
+                    <ul class="sub-menu">
+                        <li class="sub-menu-list"><span class="circle"></span> 班级管理</li>
+                        <li class="sub-menu-list"><span class="circle"></span> 直播管理</li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="main-menu-list">
+                        <img src="./images/L38/menu5.png" alt="" /><span class="title">订单管理</span>
+                        <span class="arrow"></span>
+                    </div>
+                    <ul class="sub-menu">
+                        <li class="sub-menu-list"><span class="circle"></span> 班级管理</li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="main-menu-list">
+                        <img src="./images/L38/menu6.png" alt="" /><span class="title">数据分析</span>
+                        <span class="arrow"></span>
+                    </div>
+                    <ul class="sub-menu">
+                        <li class="sub-menu-list"><span class="circle"></span> 班级管理</li>
+                        <li class="sub-menu-list"><span class="circle"></span> 直播管理</li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="main-menu-list">
+                        <img src="./images/L38/menu7.png" alt="" /><span class="title">运营</span>
+                        <span class="arrow"></span>
+                    </div>
+                    <ul class="sub-menu">
+                        <li class="sub-menu-list"><span class="circle"></span> 班级管理</li>
+                        <li class="sub-menu-list"><span class="circle"></span> 直播管理</li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="main-menu-list">
+                        <img src="./images/L38/menu8.png" alt="" /><span class="title">渠道管理</span>
+                        <span class="arrow"></span>
+                    </div>
+                    <ul class="sub-menu">
+                        <li class="sub-menu-list"><span class="circle"></span> 班级管理</li>
+                    </ul>
+                </li>
+            </ul>
+            <div id="btn"><span>></span></div>
+        </div>
+        <!-- menu end -->
+        <div class="main">
+            <div class="row row1">
+                <div class="col col-3 col-lg-6 col-sm-12">
+                    <div class="col-content">
+                        <div>最新学员</div>
+                        <div>
+                            <div>最后一周数据</div>
+                            <div>688</div>
+                        </div>
+                        <div><a href="">查看详情</a></div>
+                    </div>
+                </div>
+                <div class="col col-3 col-lg-6 col-sm-12">
+                    <div class="col-content">
+                        <div>订单</div>
+                        <div>
+                            <div>未支付订单</div>
+                            <div>11</div>
+                        </div>
+                        <div><a href="">查看详情</a></div>
+                    </div>
+                </div>
+                <div class="col col-3 col-lg-6 col-sm-12">
+                    <div class="col-content">
+                        <div>当月利润</div>
+                        <div>
+                            <div>截至到昨天</div>
+                            <div>68596</div>
+                        </div>
+                        <div><a href="">查看详情</a></div>
+                    </div>
+                </div>
+                <div class="col col-3 col-lg-6 col-sm-12">
+                    <div class="col-content">
+                        <div>快到期学员</div>
+                        <div>
+                            <div>最后一周数据</div>
+                            <div>852</div>
+                        </div>
+                        <div><a href="">查看详情</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row row2">
+                <div class="col col-8 col-md-12">
+                    <div class="col-content col-content-1">
+                        <div>最新报名学员</div>
+                        <div>
+                            <div>顾客</div>
+                            <div>产品</div>
+                            <div>发票</div>
+                            <div>价格</div>
+                            <div>价格</div>
+                        </div>
+                        <div>
+                            <div><img src="./images/L38/sign1.png" alt="" />张三</div>
+                            <div>web前端体系课程,是目前最棒的学习体系,…</div>
+                            <div>已开</div>
+                            <div>6888</div>
+                            <div>已发货</div>
+                        </div>
+                        <div>
+                            <div><img src="./images/L38/sign2.png" alt="" />李四</div>
+                            <div>web前端0基础到实战</div>
+                            <div>已开</div>
+                            <div>6888</div>
+                            <div>已发货</div>
+                        </div>
+                        <div>
+                            <div><img src="./images/L38/sign2.png" alt="" />李四</div>
+                            <div>web前端0基础到实战</div>
+                            <div>已开</div>
+                            <div>6888</div>
+                            <div>已发货</div>
+                        </div>
+                        <div>
+                            <div><img src="./images/L38/sign2.png" alt="" />李四</div>
+                            <div>web前端0基础到实战</div>
+                            <div>已开</div>
+                            <div>6888</div>
+                            <div>已发货</div>
+                        </div>
+                        <div>
+                            <div><img src="./images/L38/sign2.png" alt="" />李四</div>
+                            <div>web前端0基础到实战</div>
+                            <div>已开</div>
+                            <div>6888</div>
+                            <div>已发货</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-4 col-md-12">
+                    <div class="col-content col-content-2">
+                        <div>热门课程</div>
+                        <div>
+                            <div class="img"><img src="./images/L38/course1.png" alt="" /></div>
+                            <div class="course">
+                                <div class="title">css 6大主流布局技术</div>
+                                <div class="data">报名人:12344</div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="img"><img src="./images/L38/course1.png" alt="" /></div>
+                            <div class="course">
+                                <div class="title">Javascript基础入门到实战</div>
+                                <div class="data">报名人:12344</div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="img"><img src="./images/L38/course1.png" alt="" /></div>
+                            <div class="course">
+                                <div class="title">Vue基础到实战</div>
+                                <div class="data">报名人:12344</div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="img"><img src="./images/L38/course1.png" alt="" /></div>
+                            <div class="course">
+                                <div class="title">React入门到精通</div>
+                                <div class="data">报名人:12344</div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="img"><img src="./images/L38/course1.png" alt="" /></div>
+                            <div class="course">
+                                <div class="title">移动端WebAPP开发</div>
+                                <div class="data">报名人:12344</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row row3">
+                <div class="col col-4 col-md-12">
+                    <div class="col-content col-content-1">
+                        <div>站长公告</div>
+                        <div><img src="./images/L38/site.png" alt="" /></div>
+                        <div>
+                            艾编程是在大数据人工智能时代高速发展的今天成立的一家以提
+                            供各行业商业项目研发解决方案为核心的在线学习平台。
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-8 col-md-12"><div class="col-content col-content-2">8888</div></div>
+            </div>
+
+            <div class="row">
+                <div class="col col-4 col-md-6 col-sm-12"><div class="col-content">ooo</div></div>
+                <div class="col col-4 col-md-6 col-sm-12"><div class="col-content"></div></div>
+                <div class="col col-4 col-md-12"><div class="col-content" id="cs-chart1"></div></div>
+            </div>
+        </div>
+        <div class="footer"></div>
+
+        <script type="text/javascript">
+            // Initialize the echarts instance based on the prepared dom
+            var myChart = echarts.init(document.getElementById("cs-chart1"));
+
+            // Specify the configuration items and data for the chart
+            var option = {
+                legend: {
+                    top: "bottom",
+                },
+                toolbox: {
+                    show: true,
+                    feature: {
+                        mark: { show: true },
+                        dataView: { show: true, readOnly: false },
+                        restore: { show: true },
+                        saveAsImage: { show: true },
+                    },
+                },
+                series: [
+                    {
+                        name: "Nightingale Chart",
+                        type: "pie",
+                        radius: [50, 250],
+                        center: ["50%", "50%"],
+                        roseType: "area",
+                        itemStyle: {
+                            borderRadius: 8,
+                        },
+                        data: [
+                            { value: 40, name: "rose 1" },
+                            { value: 38, name: "rose 2" },
+                            { value: 32, name: "rose 3" },
+                            { value: 30, name: "rose 4" },
+                            { value: 28, name: "rose 5" },
+                            { value: 26, name: "rose 6" },
+                            { value: 22, name: "rose 7" },
+                            { value: 18, name: "rose 8" },
+                        ],
+                    },
+                ],
+            };
+
+            // Display the chart using the configuration items and data just specified.
+            myChart.setOption(option);
+            window.addEventListener("resize", function () {
+                myChart.resize();
+            });
+        </script>
+        <script src="./38-gridResponsivePage.js"></script>
+    </body>
+</html>

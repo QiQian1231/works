@@ -1,0 +1,506 @@
+/* Reset default CSS Start */
+body,
+ul,
+li,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+input {
+    outline: none;
+}
+
+/* Reset default CSS End */
+/* Global CSS Start */
+:root {
+    --font-gray: #6b6b6b;
+    --font-black: #000000;
+    --active-color: #ff9f00;
+}
+
+body {
+    font: 24px/1 Microsoft YaHei;
+    background-color: #fff;
+    color: var(--font-black);
+}
+
+/* Global CSS End */
+
+/* head start */
+
+.header {
+    height: 50px;
+    margin: 18px 19px 22px 20px;
+}
+
+.header ul {
+    display: flex;
+    align-items: center;
+}
+
+.header ul li:first-child {
+    flex: 1;
+}
+
+.header a.logo {
+    display: block;
+    width: 146px;
+}
+
+.header a.logo img {
+    width: 146px;
+}
+
+.header ul li a {
+    display: block;
+}
+
+.header a.search {
+    margin-right: 49px;
+}
+.header a.search img {
+    width: 38px;
+}
+
+.header a.login {
+    margin-right: 42px;
+}
+.header a.login img {
+    width: 46px;
+}
+
+.header a.download {
+    display: block;
+    width: 144px;
+    height: 48px;
+    background-color: var(--active-color);
+    color: #fff;
+    text-align: center;
+    line-height: 48px;
+    border-radius: 8px;
+}
+/* head end */
+
+/* navbar start */
+
+.navbar {
+    height: 74px;
+    /* background-color: khaki; */
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    border-bottom: 1px solid #f3f3f3;
+}
+
+.navbar a {
+    display: inline-block;
+    height: 72px;
+    line-height: 72px;
+    border-bottom: 2px solid transparent;
+    color: var(--font-gray);
+}
+
+.navbar a.active {
+    border-bottom: 2px solid var(--active-color);
+    color: var(--active-color);
+}
+
+/* navbar end */
+
+/* main start */
+main {
+    margin: 19px 19px 18px 19px;
+}
+
+#swiper-banner img {
+    width: 100%;
+    height: 100%;
+}
+
+.banner .swiper-pagination-bullet {
+    width: 15px;
+    height: 6px;
+    background-color: #fff;
+    border-radius: 0;
+    opacity: 0.5;
+}
+
+.banner .swiper-pagination-bullet-active {
+    background-color: #fff;
+    opacity: 1;
+}
+
+/* icon menu start */
+
+.icon-menu {
+    width: 100%;
+    padding: 18px 0;
+}
+
+.icon-menu ul {
+    width: 100%;
+    background-color: #f7f7f7;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 31px;
+}
+
+.icon-menu ul li {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+}
+
+.icon-menu ul li a {
+    width: 76px;
+    text-align: center;
+    color: var(--font-gray);
+    letter-spacing: 5px;
+}
+
+.icon-menu ul li a img {
+    width: 100%;
+    padding: 30px 0 10px 0;
+}
+
+/* icon menu end */
+
+/* recommend start */
+
+.recommend {
+    background: #f7f7f7;
+}
+.recommend .tabs {
+    height: 104px;
+    display: flex;
+    align-items: center;
+    background-color: khaki;
+}
+
+.recommend .tabs .tab-item {
+    margin: 0 15px;
+    display: block;
+    padding: 11px 14px;
+    font-size: 22px;
+    border-radius: 22px;
+    border: 2px solid var(--font-gray);
+    color: var(--font-gray);
+    cursor: pointer;
+}
+
+.recommend .tabs .tab-item.active {
+    border: 2px solid var(--active-color);
+    color: var(--active-color);
+}
+
+.recommend-contents {
+    height: 296px;
+}
+
+.recommend-contents .content {
+    display: none;
+}
+
+/* common-list CSS */
+.common-list .common-list-screen > img {
+    display: block;
+    width: 100%;
+    height: 194px;
+    vertical-align: top;
+}
+
+.common-list {
+    height: 296px;
+}
+
+.common-list a.common-list-screen {
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+.common-list .common-list-info {
+    height: 56px;
+    width: 100%;
+    padding: 15px 14px 14px;
+    display: flex;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.2);
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+}
+.info-l,
+.info-r {
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.common-list .common-list-info img {
+    height: 27px;
+    width: 31px;
+    margin-right: 12px;
+}
+
+.common-list .common-list-title {
+    height: 58px;
+    line-height: 1.2;
+    margin-top: 14px;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.common-list .common-list-title a {
+    display: block;
+    color: var(--font-black);
+}
+
+/* common-list CSS END */
+/* recommend end */
+
+/* hot start */
+
+.hot {
+    margin-top: 18px;
+    padding: 0 20px;
+    background-color: #f7f7f7;
+}
+.hot .hot-play {
+    height: 76px;
+    display: flex;
+    padding: 20px 0;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.hot .hot-play:last-child {
+    border-bottom: none;
+}
+
+.hot .hot-play .play-img1 {
+    width: 76px;
+    margin-right: 18px;
+    flex-shrink: 0;
+}
+.hot .hot-play .play-img2 {
+    width: 44px;
+    height: 44px;
+    /* margin: 0 15px 0 26px; */
+    margin-right: 15px;
+    align-self: center;
+    flex-shrink: 0;
+}
+
+.hot-play .hot-play-content {
+    flex: 1;
+    overflow: hidden;
+}
+.hot-play-content .title {
+    font-size: 26px;
+    line-height: 26px;
+    color: var(--active-color);
+    margin-bottom: 23px;
+}
+
+.hot-play-content .desc {
+    font-size: 24px;
+    line-height: 24px;
+    color: var(--font-black);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    /* display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical; */
+}
+
+/* hot end */
+/* view start */
+.view {
+    margin-top: 18px;
+    background: #f7f7f7;
+    border-radius: 8px;
+}
+
+.view .view-title {
+    height: 32px;
+    padding: 25px 20px 25px 11px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.view .view-title span {
+    line-height: 32px;
+    color: var(--font-black);
+}
+
+.view .view-title a {
+    align-self: center;
+    color: #b9b9bd;
+    display: flex;
+    align-items: center;
+}
+
+.view .view-title a img {
+    margin-left: 19px;
+}
+
+.view .view-box img {
+    width: 100%;
+}
+
+.view .view-box .title {
+    width: 167px;
+    padding-top: 10px;
+    height: 72px;
+    line-height: 36px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+/* view end */
+
+/* list start */
+
+.list {
+    margin-top: 18px;
+    padding-bottom: 76px;
+}
+
+.list ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.list ul li {
+    width: calc(50% - 10px);
+}
+
+.list ul li:nth-child(odd) {
+    padding-right: 10px;
+}
+
+.list ul li:nth-child(even) {
+    padding-left: 10px;
+}
+
+/* list end */
+
+/* main end */
+
+/* footer start */
+footer {
+    background-color: #fff;
+}
+.tabbar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.tabbar ul {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 45px;
+    padding-top: 15px;
+}
+
+.tabbar ul li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--font-black);
+    padding-bottom: 11px;
+}
+
+.tabbar ul li a img {
+    height: 37px;
+    width: 40px;
+    padding-bottom: 11px;
+}
+
+.tabbar ul li:nth-child(3) a {
+    background-color: var(--active-color);
+    width: 78px;
+    height: 76px;
+    border-radius: 28px;
+    justify-content: center;
+    padding-bottom: 0;
+}
+
+.tabbar ul li:nth-child(3) a img {
+    width: 30px;
+    padding-bottom: 0;
+}
+
+/* footer end */
+
+/* search mask start */
+
+.search-mask {
+    position: fixed;
+    display: none;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.search-bar {
+    box-sizing: border-box;
+    height: 50px;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 5px 20px;
+    margin-top: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    height: 100%;
+    padding-left: 24px;
+    padding-right: 24px;
+    font-size: 24px;
+    flex: 1;
+}
+
+.search-bar a {
+    width: 38px;
+    height: 38px;
+    margin-left: 10px;
+}
+
+.search-bar a img {
+    width: 100%;
+}
+
+.search-bar .close {
+    margin-left: 30px;
+    cursor: pointer;
+}
+.search-bar .close img {
+    transform: rotate(45deg);
+}
+
+/* search mask end */
