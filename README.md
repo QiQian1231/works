@@ -21,6 +21,8 @@
 {{ product.price | money }} OR LESS
 ```
 
+## 日常网页项目
+
 > Add `11.html` 小米商城 sidebar menu
 
 > Add `12.html` Hover on Video
@@ -30,6 +32,16 @@
 > Add `14.html` 3D Navbar
 
 > Add `17.html` Arry Mall PC version
+
+> Add `19_swiper` 插件
+
+> Add `20_ratingStar` JS 现实评分
+
+> Add `34-MobileApp` 手机端网页，基于 750px 设计图
+
+> Add `35-MobileApp` 手机端网页，基于 750px 设计图，可切换成 rem 自适应响应式。
+
+> Add `38-gridResponsivePage` 多端响应式网页，基于 1920 大屏设计图。自定义 grid 布局。
 
 ### `padding-bottom`可继承父元素宽作为自身高，可实现正方形效果
 
