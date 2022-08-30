@@ -21,7 +21,9 @@
 {{ product.price | money }} OR LESS
 ```
 
-## 日常网页项目
+## 日常网页项目和总结
+
+### 项目列表
 
 > Add `11.html` 小米商城 sidebar menu
 
@@ -42,6 +44,8 @@
 > Add `35-MobileApp` 手机端网页，基于 750px 设计图，可切换成 rem 自适应响应式。
 
 > Add `38-gridResponsivePage` 多端响应式网页，基于 1920 大屏设计图。自定义 grid 布局。
+
+### 项目总结
 
 ### `padding-bottom`可继承父元素宽作为自身高，可实现正方形效果
 
