@@ -86,12 +86,13 @@
 
 ### Create an export scenario
 
+> 1. Create Data Providers - Per GI - More Items > Integration > Data Provider
 > 1. More Items > Integration > Export Scenarios
-> 2. Get Screen name from Generic Inquiry page.
-> 3. check the box "Make Visible on the UI" to generate the Screen ID on Generic Inquiry page.
-> 4. More Items > Integration > Process Export Scenarios
-> 5. Click first attach icon to upload export file.
-> 6. EditUrl > Synchronization > setup FTP connection.
-> 7. sftp://sftp.xxx.com:20/folder
-> 8. Go to Export by Scenario, click Prepare & Export.
-> 9. Then go to File Synchronization, PROCESS FILE.
+> 1. Get Screen name from Generic Inquiry page.
+> 1. check the box "Make Visible on the UI" to generate the Screen ID on Generic Inquiry page.
+> 1. More Items > Integration > Process Export Scenarios
+> 1. Click first attach icon to upload export file.
+> 1. EditUrl > Synchronization > setup FTP connection.
+> 1. sftp://sftp.xxx.com:20/folder
+> 1. Go to Export by Scenario, click Prepare & Export.
+> 1. Then go to File Synchronization, PROCESS FILE.
