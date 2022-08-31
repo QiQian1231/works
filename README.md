@@ -96,3 +96,13 @@
 > 1. sftp://sftp.xxx.com:20/folder
 > 1. Go to Export by Scenario, click Prepare & Export.
 > 1. Then go to File Synchronization, PROCESS FILE.
+
+## git setup
+
+### manage git account on windows PC
+
+> 1. Control Panel
+> 1. User Accounts
+> 1. Manage your credentials
+> 1. Windows Credentials
+> 1. git:https://github.com
