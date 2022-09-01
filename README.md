@@ -111,15 +111,15 @@
 
 > 1. referrence to https://certbot.eff.org/instructions?ws=nginx&os=ubuntufocal
 > 1. Ensure that your version of snapd is up to date
-> 1. sudo snap install core; sudo snap refresh core
+> 1. `sudo snap install core; sudo snap refresh core`
 > 1. Remove certbot-auto and any Certbot OS packages by following one of commands.
->     - sudo apt-get remove certbot
->     - sudo dnf remove certbot
->     - sudo yum remove certbot
+>     - `sudo apt-get remove certbot`
+>     - `sudo dnf remove certbot`
+>     - `sudo yum remove certbot`
 > 1. Install Certbot
-> 1. sudo snap install --classic certbot
+> 1. `sudo snap install --classic certbot`
 > 1. Prepare the Certbot command
-> 1. sudo ln -s /snap/bin/certbot /usr/bin/certbot
-> 1. sudo certbot --nginx
+> 1. `sudo ln -s /snap/bin/certbot /usr/bin/certbot`
+> 1. `sudo certbot --nginx`
 > 1. Renew
-> 1. sudo certbot renew --dry-run
+> 1. `sudo certbot renew --dry-run`
