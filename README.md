@@ -96,6 +96,8 @@
 > 1. sftp://sftp.xxx.com:20/folder
 > 1. Go to Export by Scenario, click Prepare & Export.
 > 1. Then go to File Synchronization, PROCESS FILE.
+> 1. Schedule Prepare & Export. Go Process Export Scenarios - Select the scenarios - Click ... add a schedule.
+> 1. Schedule File Synchronization.
 
 ## git setup
 
@@ -106,3 +108,20 @@
 > 1. Manage your credentials
 > 1. Windows Credentials
 > 1. git:https://github.com
+
+## certbot active ssl on http
+
+> 1. referrence to https://certbot.eff.org/instructions?ws=nginx&os=ubuntufocal
+> 1. Ensure that your version of snapd is up to date
+> 1. `sudo snap install core; sudo snap refresh core`
+> 1. Remove certbot-auto and any Certbot OS packages by following one of commands.
+>     - `sudo apt-get remove certbot`
+>     - `sudo dnf remove certbot`
+>     - `sudo yum remove certbot`
+> 1. Install Certbot
+> 1. `sudo snap install --classic certbot`
+> 1. Prepare the Certbot command
+> 1. `sudo ln -s /snap/bin/certbot /usr/bin/certbot`
+> 1. `sudo certbot --nginx`
+> 1. Renew
+> 1. `sudo certbot renew --dry-run`
