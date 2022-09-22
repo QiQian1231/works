@@ -25,6 +25,8 @@
 
 ### 项目列表
 
+> Add `5.html` Vue `v-for` snippets
+
 > Add `11.html` 小米商城 sidebar menu
 
 > Add `12.html` Hover on Video
@@ -97,6 +99,10 @@
 > 1. Go to Export by Scenario, click Prepare & Export.
 > 1. Then go to File Synchronization, PROCESS FILE.
 
+### GI Syntax
+
+> `=iif([INSiteStatus.QtyAvail]<4 , 0,Ceiling(([INSiteStatus.QtyAvail])/4))` Math wrap
+
 ## git setup
 
 ### manage git account on windows PC
@@ -106,6 +112,12 @@
 > 1. Manage your credentials
 > 1. Windows Credentials
 > 1. git:https://github.com
+
+### git pull
+
+> Pull the changes from remote
+>
+> 1. `git pull origin`
 
 ## certbot active ssl on http
 
@@ -123,3 +135,5 @@
 > 1. `sudo certbot --nginx`
 > 1. Renew
 > 1. `sudo certbot renew --dry-run`
+
+### resultco ssl files `/etc/apache2/sites-available`

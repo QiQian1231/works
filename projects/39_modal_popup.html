@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>JS Detect Mouse in out Window</title>
+        <link rel="stylesheet" href="./grid.css" />
+        <script src="https://kit.fontawesome.com/62240f61a6.js" crossorigin="anonymous"></script>
+        <style>
+            html,
+            body {
+                margin: 0;
+            }
+
+            #mao-popup {
+                width: 300px;
+                height: 100px;
+                background-color: rgb(123, 228, 158);
+                border-radius: 10px;
+                cursor: pointer;
+                border: none;
+                margin: 200px;
+                display: block;
+                font-size: 30px;
+                box-shadow: 5px 5px 0 #000;
+            }
+
+            #mao-popup:active {
+                transform: translate(5px, 5px);
+                box-shadow: 1px 1px 0 #000;
+            }
+
+            .mao-mask {
+                position: fixed;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                background-color: rgba(0, 0, 0, 0.2);
+                display: none;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .mao-close i {
+                position: absolute;
+                right: 0;
+                top: 0;
+                font-size: 50px;
+                cursor: pointer;
+            }
+
+            .mao-container {
+                display: block;
+                width: 80%;
+                height: 80vh;
+                background-color: #000;
+                padding: 30px;
+                overflow: auto;
+                -ms-overflow-style: none; /* IE and Edge */
+                scrollbar-width: none; /* Firefox */
+            }
+
+            .mao-container::-webkit-scrollbar {
+                display: none;
+            }
+
+            .mao-row {
+                display: flex;
+                color: #fff;
+                flex-wrap: wrap;
+            }
+
+            .mao-row .col {
+                box-sizing: border-box;
+            }
+
+            .mao-row > .col:first-child {
+                padding-right: 15px;
+            }
+            .mao-row > .col:last-child {
+                padding-left: 15px;
+            }
+
+            .mao-policy > div {
+                background-color: #fff;
+                margin-bottom: 10px;
+                color: #000;
+                border-radius: 10px;
+                /* height: 60px; */
+                overflow: hidden;
+                transition: height 1s;
+            }
+
+            .mao-policy-2-content p {
+                margin: 0;
+            }
+            .mao-policy-1-title,
+            .mao-policy-2-title,
+            .mao-policy-3-title {
+                background-color: #f5f5f5;
+                padding: 20px;
+                font-size: 20px;
+                line-height: 20px;
+                border-radius: 10px;
+                cursor: pointer;
+            }
+
+            .mao-policy-1-content,
+            .mao-policy-2-content,
+            .mao-policy-3-content {
+                padding: 10px 20px;
+                overflow: hidden;
+                font-size: 16px;
+                line-height: 22px;
+            }
+
+            .mao-prod {
+                display: flex;
+                padding-bottom: 10px;
+            }
+
+            .mao-prod-img img {
+                width: 100%;
+                vertical-align: top;
+            }
+
+            .mao-prod-info {
+                padding-left: 10px;
+            }
+
+            .mao-prod-info div:nth-child(2) {
+                padding: 10px 0;
+            }
+
+            .mao-form input,
+            .mao-form textarea,
+            .mao-form button {
+                width: 100%;
+                margin-bottom: 10px;
+                height: 60px;
+                font-size: 20px;
+                color: #000;
+                padding: 0;
+                border: none;
+            }
+            .mao-form textarea {
+                height: 180px;
+            }
+
+            @media screen and (max-width: 992px) {
+                .mao-row > .col:first-child {
+                    padding-right: 0;
+                }
+                .mao-row > .col:last-child {
+                    padding-left: 0;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <button id="mao-popup">Popup Modal</button>
+
+        <div class="mao-mask" id="mao-mask">
+            <div class="mao-close"><i class="fa-solid fa-xmark" id="mao-close"></i></div>
+            <div class="mao-container">
+                <div class="mao-row">
+                    <div class="col col-6 col-md-12">
+                        <div class="mao-policy">
+                            <div class="mao-policy-1">
+                                <div class="mao-policy-1-title mao-policy-title">Make an offer</div>
+                                <div class="mao-policy-1-content">
+                                    When buying a product online the option to MAKE AN OFFER is normally not available.
+                                    However we want you to experience the same features as if you purchased the product
+                                    in a brick and mortar store. If you are interested in purchase and you do not feel
+                                    our price will fit your spending, MAKE AN OFFER. Depending on your offer we may
+                                    provide a compromise. Our goal is to service all of our customers as long term
+                                    friends, so even if we accept your offer you will receive the same service as if
+                                    paying full price. No restrictions and no fine print, just a fair chance for you to
+                                    get our products at a price that you're willing to pay. So please, MAKE AN OFFER
+                                </div>
+                            </div>
+
+                            <div class="mao-policy-2">
+                                <div class="mao-policy-2-title mao-policy-title">Pricing Policy</div>
+                                <div class="mao-policy-2-content">
+                                    <p>
+                                        If you found the item for less, we want to know. We understand the need to offer
+                                        the best deal to win your business. follows our BEST DEAL policy.
+                                    </p>
+                                    <p>
+                                        Our policy is simple and applies to all new, factory sealed products of the same
+                                        brand and style that are available and in stock at any authorized U.S. online
+                                        store.
+                                    </p>
+                                    <p>
+                                        If you find a better price please complete the form below. We will respond
+                                        during business hours. We take great pride that our valued customers always gets
+                                        the best deal. A Customer Service representative will contact you via email
+                                        regarding your information.
+                                    </p>
+                                    <p>
+                                        is not responsible for, and will not honor, printing or typographical errors.
+                                        Price matches will NOT include coupons, incentive offers or delayed shipping.
+                                    </p>
+                                    <p>
+                                        Please note that we may e-mail you special offers from time to time. These
+                                        include private sale events - which are only open to previous customers and
+                                        contacts. You may opt-out of these mailings at any time.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="mao-policy-3">
+                                <div class="mao-policy-3-title mao-policy-title">Our Best Deal Policy</div>
+                                <div class="mao-policy-3-content">
+                                    <ol>
+                                        <li>Guarantee is valid only for legitimate Authorized retailers.</li>
+                                        <li>
+                                            The Authorized Internet retailer must have the identical product in-stock.
+                                        </li>
+                                        <li>
+                                            Our Guarantee is valid for only one price match per order and is limited to
+                                            up to three (3) of the same product, shipped to the same address.
+                                        </li>
+                                        <li>We only price match USA retailers and websites.</li>
+                                        <li>
+                                            Prices are compared by item and include the product price, applicable taxes,
+                                            plus shipping & handling charges when calculating the competitor's total
+                                            price.
+                                        </li>
+                                        <li>
+                                            Our Guarantee does not apply to non manufacturers warranted products or gray
+                                            market items on our site. 'Gray' products have unauthorized and unsupported
+                                            resale.
+                                        </li>
+                                        <li>
+                                            Our policy excludes limited closeout specials, auction items, clearance
+                                            items, refurbished or used products, special orders, special 'club member'
+                                            pricing, products subject to a no return policy and incorrect pricing that
+                                            is the result of a typographical error or omission.
+                                        </li>
+                                        <li>
+                                            Our policy excludes limited closeout specials, auction items, clearance
+                                            items, refurbished or used products, special orders, special 'club member'
+                                            pricing, products subject to a no return policy and incorrect pricing that
+                                            is the result of a typographical error or omission.
+                                        </li>
+                                        <li>Auction site retailers are not qualified for price comparison.</li>
+                                        <li>
+                                            Retailers that offer considerably lower prices online but charge exorbitant
+                                            shipping, handling and insurance charges.
+                                        </li>
+                                        <li>
+                                            Retailers that employ bait and switch tactics. These unethical retailers
+                                            show considerably lower prices online and when contacted by telephone they
+                                            change the selling price or reveal the item is out of stock or discontinued
+                                            and try to sell you a different product entirely.
+                                        </li>
+                                        <li>
+                                            Retailers that specialize in the sale of refurbished products or products
+                                            that have been purchased in distressed condition and represent those
+                                            products as new.
+                                        </li>
+                                        <li>
+                                            Retailers that are not Manufacturer Authorized Online Resellers, which can
+                                            result in the product not being under warranty and thus being sold at lower
+                                            prices.
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-6 col-md-12">
+                        <div class="mao-prod">
+                            <div class="col col-3 mao-prod-img"><img src="./images/item_card.png" alt="" /></div>
+                            <div class="col col-9 mao-prod-info">
+                                <div>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, voluptate!
+                                </div>
+                                <div>SKU:00-00-001</div>
+                                <div>$185.00</div>
+                            </div>
+                        </div>
+                        <div class="mao-form">
+                            <form class="mao-form-row" id="mao-form">
+                                <div class="col">
+                                    <div class="group" style="display: none">
+                                        <input type="text" name="contact[title]" id="ContactForTitle" value="" />
+                                    </div>
+                                    <div class="group" style="display: none">
+                                        <input type="text" name="contact[sku]" id="ContactForSKU" value="" />
+                                    </div>
+                                    <div>
+                                        <input
+                                            type="number"
+                                            id="ContactFormOffer"
+                                            class="input-full"
+                                            name="contact[offer]"
+                                            autocapitalize="words"
+                                            placeholder="$...Enter your price here"
+                                        />
+                                    </div>
+                                    <div>
+                                        <input
+                                            type="text"
+                                            id="ContactFormName"
+                                            class="input-full"
+                                            name="contact[name]"
+                                            autocapitalize="words"
+                                            placeholder="Name"
+                                        />
+                                    </div>
+
+                                    <div>
+                                        <input
+                                            type="email"
+                                            id="ContactFormEmail"
+                                            class="input-full"
+                                            name="contact[email]"
+                                            autocapitalize="off"
+                                            placeholder="Email"
+                                            required
+                                        />
+                                    </div>
+
+                                    <div>
+                                        <input
+                                            type="tel"
+                                            id="ContactFormPhone"
+                                            class="input-full"
+                                            name="contact[phone]"
+                                            pattern="[0-9\-]*"
+                                            placeholder="Phone"
+                                        />
+                                    </div>
+
+                                    <div>
+                                        <textarea
+                                            rows="3"
+                                            id="ContactFormMessage"
+                                            class="input-full"
+                                            name="contact[message]"
+                                            placeholder="Paste the competitor link here"
+                                        ></textarea>
+                                    </div>
+
+                                    <button type="submit" class="mao-btn" id="mao-btn">Send</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            // document.documentElement.addEventListener("mouseleave", () => console.log("out"));
+            // document.documentElement.addEventListener("mouseenter", () => console.log("in"));
+
+            (function () {
+                // get page url
+                var pagePath = window.location.pathname;
+
+                console.log(pagePath);
+                // Close Modal
+                var maoClose = document.getElementById("mao-close");
+                var maoMask = document.getElementById("mao-mask");
+                var maoTitle = document.querySelectorAll(".mao-policy-title");
+                var len = maoTitle.length;
+
+                maoClose.onclick = function () {
+                    maoMask.style.display = "none";
+                };
+
+                // Click on Mask to close the Popup
+                window.onclick = function (e) {
+                    if (e.target == maoMask) {
+                        maoMask.style.display = "none";
+                    }
+                };
+                // Mouseleave Popup Modal, limit only effect on projects page.
+                // document.documentElement.addEventListener("mouseleave", () => (maoMask.style.display = "flex"));
+
+                if (pagePath.includes("projects")) {
+                    document.documentElement.onmouseleave = function () {
+                        maoMask.style.display = "flex";
+
+                        var policyContentHeight0 = maoTitle[0].nextElementSibling.clientHeight;
+                        maoTitle[0].parentNode.style.height = policyContentHeight0 + 60 + "px";
+                        maoTitle[0].flag = "open";
+                    };
+                }
+
+                // Click MAO button to Popup Modal
+
+                var maoPopup = document.getElementById("mao-popup");
+                maoPopup.onclick = function () {
+                    maoMask.style.display = "flex";
+
+                    var policyContentHeight0 = maoTitle[0].nextElementSibling.clientHeight;
+                    maoTitle[0].parentNode.style.height = policyContentHeight0 + 60 + "px";
+                    maoTitle[0].flag = "open";
+                };
+
+                // Accordion effect on MAO Policy
+
+                var policyContentHeight1 = maoTitle[1].nextElementSibling.clientHeight;
+                var policyContentHeight2 = maoTitle[2].nextElementSibling.clientHeight;
+                maoTitle[1].parentNode.style.height = policyContentHeight1 + 60 + "px";
+                maoTitle[2].parentNode.style.height = policyContentHeight2 + 60 + "px";
+
+                for (var i = 0; i < len; i++) {
+                    maoTitle[i].flag = "close";
+                    maoTitle[i].onclick = function () {
+                        if (this.flag === "close") {
+                            var h = this.nextElementSibling.clientHeight;
+                            for (j = 0; j < len; j++) {
+                                maoTitle[j].parentNode.style.height = "60px";
+                                maoTitle[j].flag = "close";
+                            }
+                            this.parentNode.style.height = h + 60 + "px";
+                            this.flag = "open";
+                        } else {
+                            this.parentNode.style.height = "60px";
+                            this.flag = "close";
+                        }
+                    };
+                }
+            })();
+
+            var maoForm = document.getElementById("mao-form");
+
+            // Success message
+
+            maoForm.onsubmit = function () {
+                var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+                var maoEmail = document.getElementById("ContactFormEmail").value;
+                var maoForm = document.getElementById("mao-form");
+                var maoContainer = document.querySelectorAll(".mao-container");
+                var maoBtn = document.getElementById("mao-btn");
+                if (maoEmail.match(validRegex)) {
+                    maoContainer[0].style.height = "auto";
+                    maoContainer[0].innerHTML =
+                        "<h2 style='text-align:center; color:#fff;'>Thank you for your offer, we will review and contact you shortly.</h2> ";
+                }
+            };
+        </script>
+    </body>
+</html>
